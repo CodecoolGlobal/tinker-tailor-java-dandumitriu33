@@ -40,10 +40,6 @@ class TinkerTailor {
     }
 
     private int calculateNewPosition(int position, int k, int size) {
-        int remainder;
-        remainder = size - position;
-        if (remainder >= k) return position + k - 1;
-        else if (remainder == 0) return 0;
-        else return k%remainder-1;
+        return (position + k-1)%size;
     }
 }
